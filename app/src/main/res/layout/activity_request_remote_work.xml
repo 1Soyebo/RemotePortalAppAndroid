@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestRemoteWork">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="376dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        android:text="Request Remote Work "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="376dp"
+        android:layout_height="34dp"
+        android:text="Choose making a request for Remote Work or joining a remote Center "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="376dp"
+        android:layout_height="34dp"
+        android:text="Pick Location"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="182dp"
+        android:layout_height="31dp"
+        android:text="Select Date and Time"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="94dp"
+        android:layout_height="34dp"
+        android:text="From"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="375dp"
+        android:layout_height="36dp"
+        android:text="Reason"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="94dp"
+        android:layout_height="34dp"
+        android:text="To "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="119dp"
+        android:layout_height="35dp"
+        android:text="Multiple Days "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="376dp"
+        android:layout_height="29dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="301dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="374dp"
+        android:layout_height="145dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="369dp"
+        android:layout_height="50dp"
+        android:text="Send Request "
+        app:layout_constraintEnd_toEndOf="@+id/editText5"
+        app:layout_constraintStart_toStartOf="@+id/editText5"
+        tools:layout_editor_absoluteY="665dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

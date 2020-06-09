@@ -1,0 +1,2 @@
+rootProject.name='RemotePortalApp'
+include ':app'

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="370dp"
+        android:layout_height="53dp"
+        android:text="Choose making a request for remote work or joining a remote center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewRequest"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewRequest"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardViewRequest"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewRequest"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgRequest"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_make_request_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Request"
+                    android:textColor="#FF9800"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/lblSubRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Make a request for Remote Work"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCheckIn"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewRequest"
+        app:layout_constraintStart_toStartOf="@id/cardViewRequest"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewRequest">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgCheckIn"
+                android:layout_width="196dp"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_check_in_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblCheckIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Check In"
+                    android:textColor="#FF9800"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/lblSubCheckIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Make a request for Remote Work"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSurvey "
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewCheckIn"
+        app:layout_constraintStart_toStartOf="@+id/cardViewCheckIn"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewCheckIn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgSurvey"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_survey_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Survey"
+                    android:textColor="#FF9800"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/lblSubSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Make a request for Remote Work"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCanteen"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewSurvey "
+        app:layout_constraintStart_toStartOf="@+id/cardViewSurvey "
+        app:layout_constraintTop_toBottomOf="@+id/cardViewSurvey ">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgCanteen"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_canteen_icon___user_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblCanteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Canteen"
+                    android:textColor="#FF9800"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/lblSubCanteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Make a request for Remote Work"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="144dp"
+        android:text="Home"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
