@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RequestRemoteWork">
+    tools:context=".ui.requestremotework.RequestRemoteWorkFragment">
 
     <TextView
         android:id="@+id/textView9"
@@ -23,117 +23,131 @@
         android:id="@+id/textView10"
         android:layout_width="376dp"
         android:layout_height="34dp"
+        android:layout_marginTop="16dp"
         android:text="Choose making a request for Remote Work or joining a remote Center "
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintStart_toStartOf="@+id/textView9"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="376dp"
         android:layout_height="34dp"
+        android:layout_marginTop="16dp"
         android:text="Pick Location"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="@+id/textView10"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="182dp"
         android:layout_height="31dp"
+        android:layout_marginTop="16dp"
         android:text="Select Date and Time"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="94dp"
         android:layout_height="34dp"
+        android:layout_marginTop="32dp"
         android:text="From"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView13"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="375dp"
         android:layout_height="36dp"
+        android:layout_marginTop="16dp"
         android:text="Reason"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/editText2"
         app:layout_constraintStart_toStartOf="@+id/textView17"
-        tools:layout_editor_absoluteY="439dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="94dp"
         android:layout_height="34dp"
+        android:layout_marginTop="16dp"
         android:text="To "
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView15"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="119dp"
         android:layout_height="35dp"
+        android:layout_marginTop="16dp"
         android:text="Multiple Days "
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/spinner"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="376dp"
         android:layout_height="29dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="@+id/textView11"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="96dp"
         android:layout_height="34dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="96dp"
         android:layout_height="34dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="96dp"
         android:layout_height="34dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/editText3"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="96dp"
         android:layout_height="34dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <EditText
         android:id="@+id/editText5"
@@ -142,16 +156,20 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="@+id/textView16"
-        tools:layout_editor_absoluteY="492dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="369dp"
         android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Send Request "
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText5"
         app:layout_constraintStart_toStartOf="@+id/editText5"
-        tools:layout_editor_absoluteY="665dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

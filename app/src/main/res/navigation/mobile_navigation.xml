@@ -12,21 +12,14 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
+            android:id="@+id/action_HomeFragment_to_RequestRemoteWork"
+            app:destination="@id/requestRemoteWork" />
     </fragment>
     <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.example.remoteportalapp.ui.home.HomeSecondFragment"
+        android:id="@+id/requestRemoteWork"
+        android:name="com.example.remoteportalapp.ui.requestremotework.RequestRemoteWorkFragment"
         android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
-        <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
-
-        <argument
-            android:name="myArg"
-            app:argType="string" />
+        tools:layout="@layout/fragment_request_remote_work">
     </fragment>
 
     <fragment
