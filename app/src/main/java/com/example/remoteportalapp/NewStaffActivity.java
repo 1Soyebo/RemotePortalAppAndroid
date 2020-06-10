@@ -37,16 +37,6 @@ public class NewStaffActivity extends AppCompatActivity {
             }
         });
 
-        CardView cardViewRequest = findViewById(R.id.cardViewRequest);
-        cardViewRequest.setClickable(true);
-        cardViewRequest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goToRequestActivity = new Intent(getApplicationContext(), RequestRemoteWork.class);
-                startActivity(goToRequestActivity);
-            }
-        });
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
