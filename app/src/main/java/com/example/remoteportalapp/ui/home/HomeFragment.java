@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavDirections;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.remoteportalapp.R;
 
@@ -41,8 +42,7 @@ public class HomeFragment extends Fragment {
 
         CardView cardViewRequest = view.findViewById(R.id.cardViewRequest);
         cardViewRequest.setClickable(true);
-        NavDirections action = HomeFragmentDirections
-                .actionHomeFragmentToRequestRemoteWork();
-//        NavHostFragment.findNavController(this).navigate(action);
+        NavDirections action = HomeFragmentDirections.actionHomeToRequestRemoteWork();
+        NavHostFragment.findNavController(this).navigate(action);
     }
 }
