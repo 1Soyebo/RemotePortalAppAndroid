@@ -5,12 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavDirections;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.remoteportalapp.R;
 
@@ -32,4 +36,57 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        CardView cardViewRequest = view.findViewById(R.id.cardViewRequest);
+        cardViewRequest.setClickable(true);
+        cardViewRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(this, "go", 5ms).show();
+                NavDirections action = HomeFragmentDirections.actionNavHomeToRequestRemoteWork();
+                NavHostFragment.findNavController(getParentFragment()).navigate(action);
+            }
+        });
+
+        CardView cardViewCheckIn = view.findViewById(R.id.cardViewCheckIn);
+        cardViewCheckIn.setClickable(true);
+        cardViewCheckIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(this, "go", 5ms).show();
+                NavDirections action = HomeFragmentDirections.actionNavHomeToStaffCheckInFragment();
+                NavHostFragment.findNavController(getParentFragment()).navigate(action);
+            }
+        });
+
+        CardView cardViewSurvey = view.findViewById(R.id.cardViewSurvey);
+        cardViewSurvey.setClickable(true);
+        cardViewSurvey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(this, "go", 5ms).show();
+                NavDirections action = HomeFragmentDirections.actionNavHomeToStaffSurveyFragment();
+                NavHostFragment.findNavController(getParentFragment()).navigate(action);
+            }
+        });
+
+        CardView cardViewCanteen = view.findViewById(R.id.cardViewCanteen);
+        cardViewCanteen.setClickable(true);
+        cardViewCanteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(this, "go", 5ms).show();
+                NavDirections action = HomeFragmentDirections.actionNavHomeToStaffCanteenFragmeent();
+                NavHostFragment.findNavController(getParentFragment()).navigate(action);
+            }
+        });
+
+    }
+
+
+
+
 }

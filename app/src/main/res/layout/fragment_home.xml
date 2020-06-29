@@ -8,28 +8,29 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Choose making a request for remote work or joining a remote center"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardViewRequest"
         app:layout_constraintEnd_toEndOf="@+id/cardViewRequest"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardViewRequest"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewRequest"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewCheckIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,6 +73,9 @@
         android:id="@+id/cardViewCheckIn"
         android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewSurvey"
         app:layout_constraintEnd_toEndOf="@+id/cardViewRequest"
         app:layout_constraintStart_toStartOf="@id/cardViewRequest"
         app:layout_constraintTop_toBottomOf="@+id/cardViewRequest">
@@ -115,9 +119,12 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewSurvey "
+        android:id="@+id/cardViewSurvey"
         android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewCanteen"
         app:layout_constraintEnd_toEndOf="@+id/cardViewCheckIn"
         app:layout_constraintStart_toStartOf="@+id/cardViewCheckIn"
         app:layout_constraintTop_toBottomOf="@+id/cardViewCheckIn">
@@ -163,9 +170,12 @@
         android:id="@+id/cardViewCanteen"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardViewSurvey "
-        app:layout_constraintStart_toStartOf="@+id/cardViewSurvey "
-        app:layout_constraintTop_toBottomOf="@+id/cardViewSurvey ">
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewSurvey"
+        app:layout_constraintStart_toStartOf="@+id/cardViewSurvey"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewSurvey">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -208,12 +218,14 @@
         android:id="@+id/textView7"
         android:layout_width="188dp"
         android:layout_height="38dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:text="Home"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

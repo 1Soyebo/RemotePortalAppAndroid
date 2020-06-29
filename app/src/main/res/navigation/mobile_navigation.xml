@@ -14,6 +14,18 @@
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
             app:destination="@id/nav_home_second" />
+        <action
+            android:id="@+id/action_nav_home_to_requestRemoteWork"
+            app:destination="@id/requestRemoteWork" />
+        <action
+            android:id="@+id/action_nav_home_to_staffCanteenFragmeent"
+            app:destination="@id/staffCanteenFragmeent" />
+        <action
+            android:id="@+id/action_nav_home_to_staffCheckInFragment"
+            app:destination="@id/staffCheckInFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_staffSurveyFragment"
+            app:destination="@id/staffSurveyFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
@@ -36,8 +48,32 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.remoteportalapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/requestRemoteWork"
+        android:name="com.example.remoteportalapp.RequestRemoteWork"
+        android:label="fragment_request_remote_work"
+        tools:layout="@layout/fragment_request_remote_work" >
+        <action
+            android:id="@+id/action_requestRemoteWork_to_requestSuccessFragment"
+            app:destination="@id/requestSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffCanteenFragmeent"
+        android:name="com.example.remoteportalapp.StaffCanteenFragmeent"
+        android:label="fragment_staff_canteen_fragmeent"
+        tools:layout="@layout/fragment_staff_canteen_fragmeent" />
+    <fragment
+        android:id="@+id/staffCheckInFragment"
+        android:name="com.example.remoteportalapp.StaffCheckInFragment"
+        android:label="fragment_staff_check_in"
+        tools:layout="@layout/fragment_staff_check_in" />
+    <fragment
+        android:id="@+id/staffSurveyFragment"
+        android:name="com.example.remoteportalapp.StaffSurveyFragment"
+        android:label="fragment_staff_survey"
+        tools:layout="@layout/fragment_staff_survey" />
+    <fragment
+        android:id="@+id/requestSuccessFragment"
+        android:name="com.example.remoteportalapp.RequestSuccessFragment"
+        android:label="fragment_request_success"
+        tools:layout="@layout/fragment_request_success" />
 </navigation>

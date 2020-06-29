@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginStaffActivity">
+    tools:context=".FinalLoginActivity">
 
     <TextView
         android:id="@+id/textView6"
@@ -16,7 +16,7 @@
         android:textColor="#050000"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/lblLoginTitle" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -142,7 +142,7 @@
         app:srcCompat="@drawable/img_left_arrow" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/lblLoginTitle"
         android:layout_width="193dp"
         android:layout_height="40dp"
         android:text="Staff Login"
