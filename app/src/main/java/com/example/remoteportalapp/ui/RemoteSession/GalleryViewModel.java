@@ -1,4 +1,4 @@
-package com.example.remoteportalapp.ui.gallery;
+package com.example.remoteportalapp.ui.RemoteSession;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

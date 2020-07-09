@@ -19,6 +19,7 @@ public class InitialLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FinalLoginActivity.activityName = "Staff Login";
+                NewStaffActivity.isSupervisor = false;
                 Intent goToLoginStaff = new Intent(getApplicationContext(), FinalLoginActivity.class);
                 startActivity(goToLoginStaff);
             }
@@ -29,6 +30,7 @@ public class InitialLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FinalLoginActivity.activityName = "Supervisor Login";
+                NewStaffActivity.isSupervisor = true;
                 Intent goToLoginSupervisor = new Intent(getApplicationContext(), FinalLoginActivity.class);
                 startActivity(goToLoginSupervisor);
             }

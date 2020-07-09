@@ -11,7 +11,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Remote Sessions</string>
+    <string name="menu_remoteSessions">Remote Sessions</string>
+    <string name="supervisor_request_list">Remote List</string>
+    <string name="supervisor_location">Locations</string>
+    <string name="supervisor_department">Department</string>
+    <string name="supervisor_canteen">Canteen</string>
 
     <string name="home_second">Home Second</string>
 

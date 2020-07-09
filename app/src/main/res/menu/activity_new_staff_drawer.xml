@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:visible="true"
+        android:id="@+id/StaffHamburgerMenu">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/remoteSessions"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_remoteSessions" />
     </group>
+
+    <group android:checkableBehavior="single"
+        android:visible="true"
+        android:id="@+id/SupervisorHamburgerMenu">
+        <item
+            android:id="@+id/supervisorRequestListFragment"
+            android:icon="@drawable/ic_request_list_icon"
+            android:title="@string/supervisor_request_list" />
+        <item
+            android:id="@+id/supervisorLocatoinFragment"
+            android:icon="@drawable/ic_home_location_icon"
+            android:title="@string/supervisor_location" />
+        <item
+            android:id="@+id/supervisorDepartmentFragment"
+            android:icon="@drawable/ic_department_icon"
+            android:title="@string/supervisor_department" />
+        <item
+            android:id="@+id/supervisorCanteenFragment"
+            android:icon="@drawable/ic_supervisor_canteen_icon"
+            android:title="@string/supervisor_canteen" />
+    </group>
+
+
 </menu>

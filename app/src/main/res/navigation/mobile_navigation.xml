@@ -12,9 +12,6 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
-        <action
             android:id="@+id/action_nav_home_to_requestRemoteWork"
             app:destination="@id/requestRemoteWork" />
         <action
@@ -27,29 +24,23 @@
             android:id="@+id/action_nav_home_to_staffSurveyFragment"
             app:destination="@id/staffSurveyFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.example.remoteportalapp.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
-        <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
 
-        <argument
-            android:name="myArg"
-            app:argType="string" />
+    <fragment
+        android:id="@+id/remoteSessions"
+        android:name="com.example.remoteportalapp.ui.RemoteSession.RemoteSessionsFragment"
+        android:label="@string/menu_remoteSessions"
+        tools:layout="@layout/fragment_staff_remote_sessions" >
+        <action
+            android:id="@+id/action_remoteSessions_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_remoteSessions_to_requestRemoteWork"
+            app:destination="@id/requestRemoteWork" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.remoteportalapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
         android:id="@+id/requestRemoteWork"
-        android:name="com.example.remoteportalapp.RequestRemoteWork"
+        android:name="com.example.remoteportalapp.ui.StaffClasses.StaffRequestRemoteWork"
         android:label="fragment_request_remote_work"
         tools:layout="@layout/fragment_request_remote_work" >
         <action
@@ -58,22 +49,83 @@
     </fragment>
     <fragment
         android:id="@+id/staffCanteenFragmeent"
-        android:name="com.example.remoteportalapp.StaffCanteenFragmeent"
+        android:name="com.example.remoteportalapp.ui.StaffClasses.StaffCanteenFragmeent"
         android:label="fragment_staff_canteen_fragmeent"
-        tools:layout="@layout/fragment_staff_canteen_fragmeent" />
+        tools:layout="@layout/fragment_staff_canteen_fragmeent" >
+        <action
+            android:id="@+id/action_staffCanteenFragmeent_to_canteenHistoryFragment"
+            app:destination="@id/canteenHistoryFragment" />
+        <action
+            android:id="@+id/action_staffCanteenFragmeent_to_supervisorRequestListFragment"
+            app:destination="@id/supervisorRequestListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/staffCheckInFragment"
-        android:name="com.example.remoteportalapp.StaffCheckInFragment"
+        android:name="com.example.remoteportalapp.ui.StaffClasses.StaffCheckInFragment"
         android:label="fragment_staff_check_in"
-        tools:layout="@layout/fragment_staff_check_in" />
+        tools:layout="@layout/fragment_staff_check_in" >
+        <action
+            android:id="@+id/action_staffCheckInFragment_to_remoteSessions"
+            app:destination="@id/remoteSessions" />
+    </fragment>
     <fragment
         android:id="@+id/staffSurveyFragment"
-        android:name="com.example.remoteportalapp.StaffSurveyFragment"
+        android:name="com.example.remoteportalapp.ui.StaffClasses.StaffSurveyFragment"
         android:label="fragment_staff_survey"
         tools:layout="@layout/fragment_staff_survey" />
     <fragment
         android:id="@+id/requestSuccessFragment"
-        android:name="com.example.remoteportalapp.RequestSuccessFragment"
+        android:name="com.example.remoteportalapp.ui.StaffClasses.StaffRequestSuccessFragment"
         android:label="fragment_request_success"
         tools:layout="@layout/fragment_request_success" />
+    <fragment
+        android:id="@+id/canteenHistoryFragment"
+        android:name="com.example.remoteportalapp.CanteenHistoryFragment"
+        android:label="fragment_canteen_history"
+        tools:layout="@layout/fragment_staff_canteen_history" />
+    <fragment
+        android:id="@+id/supervisorRequestListFragment"
+        android:name="com.example.remoteportalapp.ui.SupervisorClasses.SupervisorRequestListFragment"
+        android:label="fragment_supervisor_request_list"
+        tools:layout="@layout/fragment_supervisor_request_list" >
+        <action
+            android:id="@+id/action_supervisorRequestListFragment_to_supervisorRequestDetailsFragment"
+            app:destination="@id/supervisorRequestDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supervisorCanteenFragment"
+        android:name="com.example.remoteportalapp.ui.SupervisorClasses.SupervisorCanteenFragment"
+        android:label="fragment_supervisor_canteen"
+        tools:layout="@layout/fragment_supervisor_canteen" >
+        <action
+            android:id="@+id/action_supervisorCanteenFragment_to_canteenHistoryFragment"
+            app:destination="@id/canteenHistoryFragment" />
+        <action
+            android:id="@+id/action_supervisorCanteenFragment_to_supervisorRequestListFragment"
+            app:destination="@id/supervisorRequestListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supervisorDepartmentFragment"
+        android:name="com.example.remoteportalapp.ui.SupervisorClasses.SupervisorDepartmentFragment"
+        android:label="fragment_supervisor_department"
+        tools:layout="@layout/fragment_supervisor_department" />
+    <fragment
+        android:id="@+id/supervisorLocatoinFragment"
+        android:name="com.example.remoteportalapp.ui.SupervisorClasses.SupervisorLocatoinFragment"
+        android:label="fragment_supervisor_locatoin"
+        tools:layout="@layout/fragment_supervisor_locatoin" />
+    <fragment
+        android:id="@+id/supervisorRequestDetailsFragment"
+        android:name="com.example.remoteportalapp.ui.SupervisorClasses.SupervisorRequestDetailsFragment"
+        android:label="fragment_supervisor_request_details"
+        tools:layout="@layout/fragment_supervisor_request_details" >
+        <action
+            android:id="@+id/action_supervisorRequestDetailsFragment_to_supervisoreRequestApproved"
+            app:destination="@id/supervisoreRequestApproved" />
+    </fragment>
+    <fragment
+        android:id="@+id/supervisoreRequestApproved"
+        android:name="com.example.remoteportalapp.ui.SupervisorClasses.SupervisoreRequestApproved"
+        android:label="fragment_supervisore_request_approved"
+        tools:layout="@layout/fragment_supervisore_request_approved" />
 </navigation>

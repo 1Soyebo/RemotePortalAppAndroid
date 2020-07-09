@@ -1,19 +1,13 @@
-package com.example.remoteportalapp;
+package com.example.remoteportalapp.ui.StaffClasses;
 
-import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.solver.widgets.Helper;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,18 +16,16 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.remoteportalapp.ui.home.HomeFragment;
-import com.example.remoteportalapp.ui.home.HomeFragmentDirections;
-
-import java.util.Date;
+import com.example.remoteportalapp.HelperClass;
+import com.example.remoteportalapp.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RequestRemoteWork#newInstance} factory method to
+ * Use the {@link StaffCheckInFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RequestRemoteWork extends Fragment {
+public class StaffCheckInFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -43,7 +35,7 @@ public class RequestRemoteWork extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public RequestRemoteWork() {
+    public StaffCheckInFragment() {
         // Required empty public constructor
     }
 
@@ -53,11 +45,11 @@ public class RequestRemoteWork extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RequestRemoteWork.
+     * @return A new instance of fragment StaffCheckInFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RequestRemoteWork newInstance(String param1, String param2) {
-        RequestRemoteWork fragment = new RequestRemoteWork();
+    public static StaffCheckInFragment newInstance(String param1, String param2) {
+        StaffCheckInFragment fragment = new StaffCheckInFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,52 +60,24 @@ public class RequestRemoteWork extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
-    //Remove AppBar
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
-//    }
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
-//    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_request_remote_work, container, false);
+        return inflater.inflate(R.layout.fragment_staff_check_in, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        getActivity().getActionBar().hide();
-        Button btnRequestWork = getView().findViewById(R.id.btnRequestWork);
-        btnRequestWork.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                NavDirections action = HomeFragmentDirections.actionNavHomeToStaffCanteenFragmeent();
-//                NavHostFragment.findNavController(getParentFragment()).navigate(action);
-                NavDirections actions = RequestRemoteWorkDirections.actionRequestRemoteWorkToRequestSuccessFragment();
-                NavHostFragment.findNavController(getParentFragment()).navigate(actions);
 
-            }
-        });
-
-
-        ImageView btnBAckRequest = getView().findViewById(R.id.btnBackRequest);
+        ImageView btnBAckRequest = getView().findViewById(R.id.btnBackRequestSuccess);
         btnBAckRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,13 +95,20 @@ public class RequestRemoteWork extends Fragment {
             }
         });
 
-
-
         TextView textDate = getView().findViewById(R.id.textTodayDate);
         textDate.setText(HelperClass.getCurrentTime());
 
         TextView textTime = getView().findViewById(R.id.textTodayTime);
         textTime.setText(HelperClass.getCurrentDate());
+
+        Button btnCheckIN = getView().findViewById(R.id.btnCheckIn);
+        btnCheckIN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavDirections action = StaffCheckInFragmentDirections.actionStaffCheckInFragmentToRemoteSessions();
+                NavHostFragment.findNavController(getParentFragment()).navigate(action);
+            }
+        });
 
     }
 }

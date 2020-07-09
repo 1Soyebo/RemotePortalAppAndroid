@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.StaffClasses.StaffRequestSuccessFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.SupervisorClasses.SupervisorDepartmentFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/btnBackRequestSuccess"
-            android:layout_width="34dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/img_left_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMenuRequestSuccess" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
@@ -65,7 +54,7 @@
         </androidx.cardview.widget.CardView>
 
         <ImageButton
-            android:id="@+id/btnMenuRequestSuccess"
+            android:id="@+id/btnMenu"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:backgroundTint="#FFFFFF"
@@ -75,27 +64,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/cardView2" />
 
-        <TextView
-            android:id="@+id/lblBackToHomeRequestSuccess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back To Home"
-            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequestSuccess"
-            app:layout_constraintStart_toEndOf="@+id/btnBackRequestSuccess"
-            app:layout_constraintTop_toTopOf="@+id/btnBackRequestSuccess" />
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/editText10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/ic_orangetick"
-            android:tint="#EA5B0C"
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner3"
+            app:layout_constraintTop_toTopOf="@+id/spinner3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSuervisorDepartment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/spinner3"
+            tools:listitem="@layout/table_view_cell_supervisor_request_list" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

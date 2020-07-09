@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".StaffCheckInFragment">
+    tools:context=".ui.StaffClasses.StaffCheckInFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,11 +32,11 @@
             android:layout_marginTop="16dp"
             android:text="Select and check in to preferred location"
             app:layout_constraintEnd_toEndOf="@+id/cardView2"
-            app:layout_constraintStart_toStartOf="@+id/btnRequestWork"
+            app:layout_constraintStart_toStartOf="@+id/btnCheckIn"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
-            android:id="@+id/btnRequestWork"
+            android:id="@+id/btnCheckIn"
             android:layout_width="0dp"
             android:layout_height="52dp"
             android:layout_marginStart="16dp"
@@ -46,10 +46,11 @@
             android:text="Send Request "
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/btnBackRequest"
+            android:id="@+id/btnBackRequestSuccess"
             android:layout_width="34dp"
             android:layout_height="25dp"
             android:layout_marginStart="6dp"
@@ -118,9 +119,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back To Home"
-            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequest"
-            app:layout_constraintStart_toEndOf="@+id/btnBackRequest"
-            app:layout_constraintTop_toTopOf="@+id/btnBackRequest" />
+            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequestSuccess"
+            app:layout_constraintStart_toEndOf="@+id/btnBackRequestSuccess"
+            app:layout_constraintTop_toTopOf="@+id/btnBackRequestSuccess" />
 
         <TextView
             android:id="@+id/textView5"
@@ -139,7 +140,7 @@
             android:layout_width="0dp"
             android:layout_height="26dp"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="@+id/btnRequestWork"
+            app:layout_constraintEnd_toEndOf="@+id/btnCheckIn"
             app:layout_constraintStart_toStartOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -175,9 +176,9 @@
             android:layout_marginTop="9dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/ic_qr"
-            app:layout_constraintBottom_toTopOf="@+id/btnRequestWork"
-            app:layout_constraintEnd_toEndOf="@+id/btnRequestWork"
-            app:layout_constraintStart_toStartOf="@+id/btnRequestWork"
+            app:layout_constraintBottom_toTopOf="@+id/btnCheckIn"
+            app:layout_constraintEnd_toEndOf="@+id/btnCheckIn"
+            app:layout_constraintStart_toStartOf="@+id/btnCheckIn"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

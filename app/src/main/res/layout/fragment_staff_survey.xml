@@ -1,233 +1,468 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- TODO: Update blank fragment layout -->
+<!-- TODO: Update blank fragment layout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".StaffSurveyFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:text="Check In"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="16dp"
-            android:text="Check In"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView9"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:text="Select and check in to preferred location"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/btnSubmitSurvey"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="16dp"
-            android:text="Select and check in to preferred location"
-            app:layout_constraintEnd_toEndOf="@+id/cardView2"
-            app:layout_constraintStart_toStartOf="@+id/btnRequestWork"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+    <Button
+        android:id="@+id/btnSubmitSurvey"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#ea5b0c"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/btnRequestWork"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#ea5b0c"
-            android:text="Send Request "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/btnBackRequestSuccess"
+        android:layout_width="34dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/img_left_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenu" />
 
-        <ImageView
-            android:id="@+id/btnBackRequest"
-            android:layout_width="34dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="7dp"
-            android:src="@drawable/img_left_arrow"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMenu" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1DDC0">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/textTodayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintBottom_toBottomOf="@+id/textTodayTime"
+                app:layout_constraintEnd_toStartOf="@+id/textTodayTime"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textTodayTime" />
+
+            <TextView
+                android:id="@+id/textTodayTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textTodayDate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_open_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back To Home"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackRequestSuccess"
+        app:layout_constraintStart_toEndOf="@+id/btnBackRequestSuccess"
+        app:layout_constraintTop_toTopOf="@+id/btnBackRequestSuccess" />
+
+    <ScrollView
+        android:id="@+id/scrollViewCheckIn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmitSurvey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ContraintLayoutScrollViewCheckin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/spinner5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#F1DDC0">
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textTodayDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    app:layout_constraintBottom_toBottomOf="@+id/textTodayTime"
-                    app:layout_constraintEnd_toStartOf="@+id/textTodayTime"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textTodayTime" />
+            <RadioGroup
+                android:id="@+id/location_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:divider="?android:attr/dividerHorizontal"
+                android:showDividers="middle"
+                app:layout_constraintEnd_toEndOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19">
 
-                <TextView
-                    android:id="@+id/textTodayTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:text="TextView"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textTodayDate"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <ImageButton
-            android:id="@+id/btnMenu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="#FFFFFF"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_open_menu"
-            app:layout_constraintBottom_toBottomOf="@+id/cardView2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cardView2" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back To Home"
-            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequest"
-            app:layout_constraintStart_toEndOf="@+id/btnBackRequest"
-            app:layout_constraintTop_toTopOf="@+id/btnBackRequest" />
-
-        <ScrollView
-            android:layout_width="409dp"
-            android:layout_height="463dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnRequestWork"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-            app:layout_constraintVertical_bias="0.0">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Spinner
-                    android:id="@+id/spinner5"
+                <RadioButton
+                    android:id="@+id/first"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/location_radio_group"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <RadioGroup
-                    android:id="@+id/location_radio_group"
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:divider="?android:attr/dividerHorizontal"
-                    android:showDividers="middle"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView19"
-                    app:layout_constraintStart_toStartOf="@+id/textView19"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19">
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="first"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/first"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:background="?android:selectableItemBackground"
-                        android:button="@null"
-                        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="10dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="10dp"
-                        android:text="first"
-                        android:textAlignment="textStart"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/second"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:background="?android:selectableItemBackground"
-                        android:button="@null"
-                        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="10dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="10dp"
-                        android:text="second"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/third"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:background="?android:selectableItemBackground"
-                        android:button="@null"
-                        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="10dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="10dp"
-                        android:text="third"
-                        android:textSize="20sp" />
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/second"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toEndOf="@+id/spinner5"
-                    app:layout_constraintStart_toStartOf="@+id/spinner5"
-                    app:layout_constraintTop_toBottomOf="@+id/spinner5" />
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="second"
+                    android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/third"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toEndOf="@+id/location_radio_group"
-                    app:layout_constraintStart_toStartOf="@+id/location_radio_group"
-                    app:layout_constraintTop_toBottomOf="@+id/location_radio_group" />
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="third"
+                    android:textSize="20sp" />
+            </RadioGroup>
 
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/spinner5"
+                app:layout_constraintStart_toStartOf="@+id/spinner5"
+                app:layout_constraintTop_toBottomOf="@+id/spinner5" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/location_radio_group"
+                app:layout_constraintStart_toStartOf="@+id/location_radio_group"
+                app:layout_constraintTop_toBottomOf="@+id/location_radio_group" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <RadioGroup
+                android:id="@+id/location_radio_group_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:divider="?android:attr/dividerHorizontal"
+                android:showDividers="middle"
+                app:layout_constraintEnd_toEndOf="@+id/textView21"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView21">
 
-</FrameLayout>
+                <RadioButton
+                    android:id="@+id/firstTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="first"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/secondTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="second"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/thirdTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="third"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/checkInViewOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/switch2"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="@+id/location_radio_group_two"
+                app:layout_constraintTop_toBottomOf="@+id/location_radio_group_two" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                app:layout_constraintBottom_toBottomOf="@+id/checkInViewOne"
+                app:layout_constraintEnd_toEndOf="@+id/location_radio_group_two"
+                app:layout_constraintTop_toTopOf="@+id/checkInViewOne" />
+
+            <TextView
+                android:id="@+id/checkInTextTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/switch3"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="@+id/checkInViewOne"
+                app:layout_constraintTop_toBottomOf="@+id/checkInViewOne" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                app:layout_constraintBottom_toBottomOf="@+id/checkInTextTwo"
+                app:layout_constraintEnd_toEndOf="@+id/switch2"
+                app:layout_constraintTop_toTopOf="@+id/checkInTextTwo" />
+
+            <TextView
+                android:id="@+id/checkInTextThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/switch4"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="@+id/checkInTextTwo"
+                app:layout_constraintTop_toBottomOf="@+id/checkInTextTwo" />
+
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                app:layout_constraintBottom_toBottomOf="@+id/checkInTextThree"
+                app:layout_constraintEnd_toEndOf="@+id/switch3"
+                app:layout_constraintTop_toTopOf="@+id/checkInTextThree" />
+
+            <TextView
+                android:id="@+id/checkInTextFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/switch5"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="@+id/checkInTextThree"
+                app:layout_constraintTop_toBottomOf="@+id/checkInTextThree" />
+
+            <Switch
+                android:id="@+id/switch5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                app:layout_constraintBottom_toBottomOf="@+id/checkInTextFour"
+                app:layout_constraintEnd_toEndOf="@+id/switch4"
+                app:layout_constraintTop_toTopOf="@+id/checkInTextFour" />
+
+            <TextView
+                android:id="@+id/checkInTextFive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/switch6"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="@+id/checkInTextFour"
+                app:layout_constraintTop_toBottomOf="@+id/checkInTextFour" />
+
+            <Switch
+                android:id="@+id/switch6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                app:layout_constraintBottom_toBottomOf="@+id/checkInTextFive"
+                app:layout_constraintEnd_toEndOf="@+id/switch5"
+                app:layout_constraintTop_toTopOf="@+id/checkInTextFive" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/switch6"
+                app:layout_constraintStart_toStartOf="@+id/checkInTextFive"
+                app:layout_constraintTop_toBottomOf="@+id/checkInTextFive" />
+
+            <RadioGroup
+                android:id="@+id/location_radio_group_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:divider="?android:attr/dividerHorizontal"
+                android:showDividers="middle"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+                <RadioButton
+                    android:id="@+id/firstThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="first"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/secondThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="second"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/thirdThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="?android:selectableItemBackground"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="third"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="@+id/location_radio_group_three"
+                app:layout_constraintStart_toStartOf="@+id/location_radio_group_three"
+                app:layout_constraintTop_toBottomOf="@+id/location_radio_group_three" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

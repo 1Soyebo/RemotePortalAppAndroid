@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="canteen_history_array">
+        <item>All</item>
+        <item>Successful</item>
+        <item>Failed</item>
+    </string-array>
+    <string-array name="locations_array">
+        <item>Location Staff</item>
+        <item>View Location</item>
+    </string-array>
+</resources>

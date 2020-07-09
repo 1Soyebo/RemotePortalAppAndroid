@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RequestRemoteWork">
+    tools:context=".ui.StaffClasses.StaffRequestRemoteWork">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -178,7 +178,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/btnBackRequest"
+            android:id="@+id/btnBackRequestSuccess"
             android:layout_width="34dp"
             android:layout_height="25dp"
             android:layout_marginStart="6dp"
@@ -247,8 +247,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back To Home"
-            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequest"
-            app:layout_constraintStart_toEndOf="@+id/btnBackRequest"
-            app:layout_constraintTop_toTopOf="@+id/btnBackRequest" />
+            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequestSuccess"
+            app:layout_constraintStart_toEndOf="@+id/btnBackRequestSuccess"
+            app:layout_constraintTop_toTopOf="@+id/btnBackRequestSuccess" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

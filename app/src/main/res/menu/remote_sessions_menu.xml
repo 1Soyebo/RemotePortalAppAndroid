@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/endSession"
+        android:title="End Session" />
+    <item android:id="@+id/suspendSession"
+        android:title="Suspend Session" />
+    <item android:id="@+id/cancelAction"
+        android:title="Cancel" />
+    <item android:id="@+id/editDate"
+        android:title="Edit Date" />
+</menu>

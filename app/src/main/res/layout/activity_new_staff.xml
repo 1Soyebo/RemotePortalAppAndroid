@@ -20,6 +20,20 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_new_staff"
-        app:menu="@menu/activity_new_staff_drawer" />
+        app:menu="@menu/activity_new_staff_drawer" >
+
+        <Button
+            android:id="@+id/footer_item_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#ea5b0c"
+            android:text="Sign Out"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    </com.google.android.material.navigation.NavigationView>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

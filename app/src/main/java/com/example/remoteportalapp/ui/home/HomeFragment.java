@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.remoteportalapp.HelperClass;
 import com.example.remoteportalapp.R;
 
 public class HomeFragment extends Fragment {
@@ -83,6 +85,20 @@ public class HomeFragment extends Fragment {
                 NavHostFragment.findNavController(getParentFragment()).navigate(action);
             }
         });
+
+        ImageButton btnMenu = getView().findViewById(R.id.btnMenu);
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HelperClass.handleMenuSlide(getActivity());
+            }
+        });
+
+        TextView textDate = getView().findViewById(R.id.textTodayDate);
+        textDate.setText(HelperClass.getCurrentTime());
+
+        TextView textTime = getView().findViewById(R.id.textTodayTime);
+        textTime.setText(HelperClass.getCurrentDate());
 
     }
 

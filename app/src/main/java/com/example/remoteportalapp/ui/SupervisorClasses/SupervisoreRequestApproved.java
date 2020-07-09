@@ -1,4 +1,4 @@
-package com.example.remoteportalapp;
+package com.example.remoteportalapp.ui.SupervisorClasses;
 
 import android.os.Bundle;
 
@@ -13,13 +13,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.remoteportalapp.HelperClass;
+import com.example.remoteportalapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link StaffCheckInFragment#newInstance} factory method to
+ * Use the {@link SupervisoreRequestApproved#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StaffCheckInFragment extends Fragment {
+public class SupervisoreRequestApproved extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +31,7 @@ public class StaffCheckInFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public StaffCheckInFragment() {
+    public SupervisoreRequestApproved() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class StaffCheckInFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment StaffCheckInFragment.
+     * @return A new instance of fragment SupervisoreRequestApproved.
      */
     // TODO: Rename and change types and number of parameters
-    public static StaffCheckInFragment newInstance(String param1, String param2) {
-        StaffCheckInFragment fragment = new StaffCheckInFragment();
+    public static SupervisoreRequestApproved newInstance(String param1, String param2) {
+        SupervisoreRequestApproved fragment = new SupervisoreRequestApproved();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,28 +66,25 @@ public class StaffCheckInFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_staff_check_in, container, false);
+        return inflater.inflate(R.layout.fragment_supervisore_request_approved, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        ImageView btnBAckRequest = getView().findViewById(R.id.btnBackRequest);
-        btnBAckRequest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().onBackPressed();
-            }
-        });
-
-        //final DrawerLayout drawer  = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
-
-        ImageButton btnMenu = getView().findViewById(R.id.btnMenu);
+        ImageButton btnMenu = getView().findViewById(R.id.btnMenuRequestSuccess);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 HelperClass.handleMenuSlide(getActivity());
+            }
+        });
+
+        ImageView btnBAckRequest = getView().findViewById(R.id.btnBackRequestSuccess);
+        btnBAckRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
             }
         });
 
@@ -94,6 +93,5 @@ public class StaffCheckInFragment extends Fragment {
 
         TextView textTime = getView().findViewById(R.id.textTodayTime);
         textTime.setText(HelperClass.getCurrentDate());
-
     }
 }
